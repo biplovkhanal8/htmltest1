@@ -3,107 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biplov's HTML Practice</title>
+    <title>Hands-on Practice</title>
 </head>
 <body>
 
-    <!-- Task 1: Title and Heading -->
-    <h1>Welcome to Biplov's HTML Practice</h1>
+    <!-- Task 1: User Registration Form with Validation -->
+    <h2>User Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-    <!-- Task 2: Multiple Headings -->
-    <h1>Main Heading (H1)</h1>
-    <h2>Subheading (H2)</h2>
-    <h3>Sub-subheading (H3)</h3>
-    <h4>H4 Example</h4>
-    <h5>H5 Example</h5>
-    <h6>Smallest Heading (H6)</h6>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <!-- Task 3: Paragraph with Hyperlink -->
-    <p>Hello, I am Biplov from Kathmandu, Nepal. Visit <a href="https://www.google.com">Google</a> for more information.</p>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
-    <!-- Task 4: Insert an Image -->
-    <img src="logo.jpg" alt="Orderific">
+        <button type="submit">Register</button>
+    </form>
 
-    <!-- Task 5: Multiple Sections Using <div> -->
-    <div id="about">
-        <h2>About Me</h2>
-        <p>I am a web developer from Kathmandu, Nepal.</p>
-    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
 
-    <div id="projects">
-        <h2>My Projects</h2>
-        <p>Details about my projects go here.</p>
-    </div>
+            if (username === "" || email === "" || password === "") {
+                alert("All fields are required!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
-    <!-- Task 6: Navigation Bar -->
-    <nav>
-        <a href="#about">About</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Task 7: Profile Page -->
-    <h1>My Profile</h1>
-    <img src="foto.jpg" alt="Orderific">
-    <p>Hi, I am Biplov, a web developer based in Kathmandu, Nepal.</p>
-
-    <!-- Task 8: External Link in New Tab -->
-    <a href="https://www.github.com" target="_blank">Visit GitHub</a>
-
-    <!-- Task 9: Comments in HTML -->
-    <!-- This section contains my profile information -->
-
-    <!-- Task 10: Formatting Text -->
-    <p><b>Bold Text</b></p>
-    <p><i>Italic Text</i></p>
-    <p><u>Underlined Text</u></p>
-
-    <!-- Task 11: Line Breaks & Horizontal Rules -->
-    <p>First paragraph.</p>
     <hr>
-    <p>Second paragraph.</p>
 
-    <!-- Task 12: Use <strong> and <em> -->
-    <p>This is <strong>important</strong> text.</p>
-    <p>This is <em>emphasized</em> text.</p>
+    <!-- Task 2: Video and Audio Player -->
+    <h2>Video and Audio Player</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <br><br>
 
-    <!-- Task 13: Nested Elements in a <div> -->
-    <div>
-        <h2>Nested Section</h2>
-        <p>Some content inside a div.</p>
-    </div>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-    <!-- Task 14: Button to Link to a Section -->
-    <button onclick="location.href='#about'">Go to About</button>
+    <hr>
 
-    <!-- Task 15: Ordered & Unordered Lists -->
-    <h2>Favorite Books</h2>
-    <ul>
-        <li>Book 1</li>
-        <li>Book 2</li>
-    </ul>
+    <!-- Task 3: Display an SVG Icon from Figma -->
+    <h2>SVG Icon</h2>
+    <img src="Introduction.svg" alt="SVG Icon">
 
-    <ol>
-        <li>First Book</li>
-        <li>Second Book</li>
-    </ol>
+    <hr>
 
-    <!-- Task 16: Email Link -->
-    <a href="mailto:biplov@example.com">Email Me</a>
+    <!-- Task 4: Embed YouTube Video -->
+    <h2>Embedded YouTube Video</h2>
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/U9LMQRtQ_o0" 
+    frameborder="0" allowfullscreen>
+</iframe>
 
-    <!-- Task 17: Basic Blog Page Structure -->
-    <h1>My Blog</h1>
-    <p>Welcome to my blog. Here I share my thoughts and ideas.</p>
 
-    <!-- Task 18: Test Different Headings -->
-    <h1>H1 Example</h1>
-    <h2>H2 Example</h2>
+    <!-- Task 5: Sign-in Form (WSP) without Styling -->
+    <h2>WSP Sign-in Form</h2>
+    <form>
+        <label for="wsp-email">Email:</label>
+        <input type="email" id="wsp-email" name="wsp-email"><br><br>
 
-    <!-- Task 19: Blockquote -->
-    <blockquote>
-        "Success is not final, failure is not fatal: it is the courage to continue that counts."
-        <cite>- Winston Churchill</cite>
-    </blockquote>
+        <label for="wsp-password">Password:</label>
+        <input type="password" id="wsp-password" name="wsp-password"><br><br>
+
+        <button type="submit">Sign In</button>
+    </form>
 
 </body>
 </html>
